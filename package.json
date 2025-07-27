@@ -1,0 +1,24 @@
+{
+  "name": "wastelight-africa",
+  "version": "1.0.0",
+  "description": "African Waste-to-Energy Innovation Hub - Fueling Communities from What We Throw Away",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": "cd client && npm run build && cd ../server && npm run build",
+    "start": "cd server && npm start",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "setup": "npm run install:all && npm run setup:db",
+    "setup:db": "cd server && npm run setup:db"
+  },
+  "keywords": ["waste-to-energy", "africa", "sustainability", "innovation", "community"],
+  "author": "WasteLight Africa Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
